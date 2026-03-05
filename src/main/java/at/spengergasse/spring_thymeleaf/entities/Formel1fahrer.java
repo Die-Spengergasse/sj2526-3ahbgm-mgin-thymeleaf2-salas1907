@@ -30,4 +30,12 @@ public class Formel1fahrer {
     public void setTeam(String team) {
         this.team = team;
     }
+
+     public int getId() {
+        return id;
+    }
+    public int setId(int id) {
+        this.id = id;
+        return id;
+    }
 }

@@ -18,6 +18,10 @@
         <tr th:each="d : ${Driver}">
             <td th:text="${d.name}"></td>
             <td th:text="${d.team}"></td>
+            <td>
+                <a th:href="@{/driver/edit/{id}(id=${d.id})}" class="btn btn-warning btn-sm">Edit</a>
+                <a th:href="@{/driver/delete/{id}(id=${d.id})}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
         </tr>
         </tbody>
 

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Driver</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Edit Driver</h2>
+    <form th:action="@{/driver/edit/{id}(id=${Driver.id})}" th:object="${Driver}" method="post">
+        <input type="text" th:field="*{name}" class="form-control" placeholder="Driver name">
+        <br>
+        <input type="text" th:field="*{team}" class="form-control" placeholder="Team name">
+        <br>
+        <input type="submit" class="form-control btn btn-primary" value="Save">
+    </form>
+</div>
+</body>
+</html>
