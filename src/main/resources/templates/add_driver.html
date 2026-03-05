@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add new driver</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/driver/add}" th:object="${Driver}" method="post">
+        <input type="text" th:field="*{name}" class="form-control" placeholder="Fahrer name">
+        <br>
+        <input type="text" th:field="*{team}" class="form-control" placeholder="Team name">
+        <br>
+        <input type="submit" class="form-control" value="Save">
+    </form>
+</div>
+</body>
+</html>
